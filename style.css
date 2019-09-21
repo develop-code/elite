@@ -451,9 +451,9 @@ img {
 .mu-about-us-right {
   display: inline;
   float: left;
-  margin-top: 20px;
+  /* margin-top: 20px;
   padding-top: 30px;
-  padding-left: 15px;
+  padding-left: 15px; */
   width: 100%;
 }
 
@@ -473,12 +473,17 @@ img {
   margin-right: 10px;
 }
 
-.mu-about-us-left {
+/* .mu-about-us-left {
   display: inline;
   float: left;
   margin-top: 20px;
   padding-top: 30px;
   padding-right: 15px;
+  width: 100%;
+} */
+
+.mu-about-us-left {
+  margin-top: 60px;
   width: 100%;
 }
 
