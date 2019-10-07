@@ -493,7 +493,7 @@ img {
 
 .mu-title .mu-subtitle {
   font-size: 50px;
-  font-family: "Tangerine", cursive;
+  /* font-family: "Tangerine", cursive; */
   line-height: 30px;
 }
 
