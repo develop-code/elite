@@ -83,51 +83,51 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="#mu-about-us">About Us</a></li>                       
             <li> <!-- mu-restaurant-menu -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Languages & Courses<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle uno" data-toggle="dropdown">Languages & Courses<b class="caret"></b></a>
               <ul class="dropdown-menu multi-level">
                   <li class="dropdown-submenu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gb"></i>&nbsp;&nbsp;&nbsp;English</a>
                       <ul class="dropdown-menu">
-                          <li><a href="#englishcourse">ELITE English program</a></li>
-                          <li><a href="#englishcourse">English file </a></li>
-                          <li><a href="#englishcourse">ILETS</a></li>
-                          <li><a href="#englishcourse">TOEFL</a></li>
-                          <li><a href="#englishcourse">English for children</a></li>
+                          <li><a href="#" onclick='selectLanguage("#englishcourse")'>ELITE English program</a></li>
+                          <li><a href="#" onclick='selectLanguage("#englishcourse")'>English file </a></li>
+                          <li><a href="#" onclick='selectLanguage("#englishcourse")'>ILETS</a></li>
+                          <li><a href="#" onclick='selectLanguage("#englishcourse")'>TOEFL</a></li>
+                          <li><a href="#" onclick='selectLanguage("#englishcourse")'>English for children</a></li>
                       </ul>
                   </li>
                   <li class="dropdown-submenu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-de"></i>&nbsp;&nbsp;&nbsp;German</a>
                       <ul class="dropdown-menu">
-                          <li><a href="#germancourses" data-toggle="tab">German CEFR</a></li>
-                          <li><a href="#germancourses" data-toggle="tab">German visa </a></li>
-                          <li><a href="#germancourses" data-toggle="tab">DAF</a></li>
+                          <li><a href="#" onclick='selectLanguage("#germancourses")'>German CEFR</a></li>
+                          <li><a href="#" onclick='selectLanguage("#germancourses")'>German visa </a></li>
+                          <li><a href="#" onclick='selectLanguage("#germancourses")'>DAF</a></li>
                       </ul>
                   </li>
                   <li class="dropdown-submenu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-tr"></i>&nbsp;&nbsp;&nbsp;Turkish</a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Turkish CEFR </a></li>
-                          <li><a href="#">Turkish visa </a></li>
+                          <li><a  onclick='selectLanguage("#Turkishcourses")'>Turkish CEFR </a></li>
+                          <li><a href="#" onclick='selectLanguage("#Turkishcourses")'>Turkish visa </a></li>
                       </ul>
                   </li>
                   <li class="dropdown-submenu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gf"></i>&nbsp;&nbsp;&nbsp;French</a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">French CEFR</a></li>
-                          <li><a href="#">DELF</a></li>
+                          <li><a href="#" onclick='selectLanguage("#Frenchcourses")'>French CEFR</a></li>
+                          <li><a href="#" onclick='selectLanguage("#Frenchcourses")'>DELF</a></li>
                       </ul>
                   </li>
                   <li>
-                      <a href="#mu-about-us" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-cn"></i>&nbsp;&nbsp;&nbsp;Chinese</a>
+                      <a href="#" class="dropdown-toggle" onclick='selectLanguage("#Chinesecourses")' data-toggle="dropdown"><i class="flag-icon flag-icon-cn"></i>&nbsp;&nbsp;&nbsp;Chinese</a>
                   </li>
                   <li>
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-ru"></i>&nbsp;&nbsp;&nbsp;Russian</a>
+                      <a href="#" class="dropdown-toggle" onclick='selectLanguage("#Russiancourses")' data-toggle="dropdown"><i class="flag-icon flag-icon-ru"></i>&nbsp;&nbsp;&nbsp;Russian</a>
                   </li>
                   <li class="dropdown-submenu">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-es"></i>&nbsp;&nbsp;&nbsp;Spanish</a>
+                      <a href="#" class="dropdown-toggle"  data-toggle="dropdown"><i class="flag-icon flag-icon-es"></i>&nbsp;&nbsp;&nbsp;Spanish</a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Spanish CEFR</a></li>
-                          <li><a href="#">DELE</a></li>
+                          <li><a href="#" onclick='selectLanguage("#Spanishcourses")'>Spanish CEFR</a></li>
+                          <li><a href="#" onclick='selectLanguage("#Spanishcourses")'>DELE</a></li>
                       </ul>
                   </li>
                   <li>
@@ -452,7 +452,7 @@ We orient our high-quality language services towards the individual needs of our
             </div>
             
             <div class="mu-restaurant-menu-content">
-              <ul class="nav nav-tabs mu-restaurant-menu">
+              <ul class="nav nav-tabs mu-restaurant-menu" id="myMasterCourseTab">
                 <li class="active"><a href="#englishcourse" data-toggle="tab"><i class="flag-icon flag-icon-gb"></i>&nbsp;English</a></li>
                 <li><a href="#germancourses" data-toggle="tab"><i class="flag-icon flag-icon-de"></i>&nbsp;German</a></li>
                 <li><a href="#Turkishcourses" data-toggle="tab"><i class="flag-icon flag-icon-tr"></i>&nbsp;Turkish</a></li>
@@ -1776,6 +1776,46 @@ Online classes improves your skills (Listening, Speaking, Reading, and Writing) 
  
   <!-- Custom js -->
   <script src="assets/js/custom.js"></script> 
+ 
+  <script type="text/javascript">
+      function selectLanguage (id) {
+        if(id == "#Turkishcourses") {
+          $('#myMasterCourseTab a[href="#Turkishcourses"]').click();
+          $('#myMasterCourseTab a[href="#Turkishcourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#Turkishcourses').offset().top }, 'slow');
+        }
+        if(id == "#englishcourse") {
+          $('#myMasterCourseTab a[href="#englishcourse"]').click();
+          $('#myMasterCourseTab a[href="#englishcourse"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#englishcourse').offset().top }, 'slow');
+        }
+        if(id == "#germancourses") {
+          $('#myMasterCourseTab a[href="#germancourses"]').click();
+          $('#myMasterCourseTab a[href="#germancourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#germancourses').offset().top }, 'slow');
+        }
+        if(id == "#Frenchcourses") {
+          $('#myMasterCourseTab a[href="#Frenchcourses"]').click();
+          $('#myMasterCourseTab a[href="#Frenchcourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#Frenchcourses').offset().top }, 'slow');
+        }
+        if(id == "#Chinesecourses") {
+          $('#myMasterCourseTab a[href="#Chinesecourses"]').click();
+          $('#myMasterCourseTab a[href="#Chinesecourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#Chinesecourses').offset().top }, 'slow');
+        }
+        if(id == "#Russiancourses") {
+          $('#myMasterCourseTab a[href="#Russiancourses"]').click();
+          $('#myMasterCourseTab a[href="#Russiancourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#Russiancourses').offset().top }, 'slow');
+        }
+        if(id == "#Spanishcourses") {
+          $('#myMasterCourseTab a[href="#Spanishcourses"]').click();
+          $('#myMasterCourseTab a[href="#Spanishcourses"]').tab('show');
+          $('html, body').animate({ scrollTop: $('#Spanishcourses').offset().top }, 'slow');
+        }
+      };
 
+  </script>
   </body>
 </html>
