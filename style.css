@@ -1139,7 +1139,20 @@ RESERVATION SECTION
   padding: 100px 0;
   width: 100%;
 }
-
+#EliteEnglishprogram {
+  display: inline;
+  float: left;
+  padding-top: 100px;
+  width: 100%;
+}
+#French-CEFR,
+#IELTS,
+#TOEFL {
+  display: inline;
+  float: left;
+  padding-top: 100px;
+  width: 100%;
+}
 .mu-chef-area {
   display: inline;
   float: left;
